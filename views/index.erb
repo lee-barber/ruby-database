@@ -1,0 +1,39 @@
+<h2>Individual Database App</h2>
+
+<h4>Posts</h4>
+
+<% @posts.each do |a| %>
+
+<div><%= a.title %><div>
+<div><%= a.content %></div>
+<div><%= a.category %></div>
+<% end %> 
+
+<h3>Add new Post</h3>
+
+<form method='POST' action='/new_post'>
+	<input type="text" name="title" placeholder="title">
+	<input type="text" name="content" placeholder="content">
+	<input type="text" name="category" placeholder="category">
+	<input type="submit" value="create blog">
+</form>
+
+<hr>
+
+<h4>Users</h4>
+
+<% @users.each do |b| %>
+
+<div><%= b.name %><div>
+<div><%= b.age %></div>
+<div><%= b.location %></div>
+<% end %> 
+
+<h3>Add new User</h3>
+
+<form method='POST' action='/new_user'>
+	<input type="text" name="name" placeholder="name">
+	<input type="integer" name="age" placeholder="age">
+	<input type="text" name="location" placeholder="location">
+	<input type="submit" value="submit user">
+</form>
